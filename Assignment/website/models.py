@@ -64,3 +64,5 @@ class TicketOrder(db.Model):
     ticketNum = db.Column(id.Integer)
     Event_id = db.Column(db.Integer, db.ForeignKey('Events.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    def __repr__(self):
+        return f"Name: {self.ticketNum}"
